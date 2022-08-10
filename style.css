@@ -1,0 +1,192 @@
+/*
+- Mobile: 375px
+- Desktop: 1440px
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+html,body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Red Hat Display";
+    position: absolute;
+}
+* {
+    transition: 500ms;
+}
+.card {
+    width: 325px;
+    height: 564px;
+    background-color: #fefefe;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow:
+    0px 1px 2px 4px rgba(0, 0, 0, 0.03),
+    1px 2px 4px 8px rgba(0, 0, 0, 0.03),
+    2px 4px 8px 16px rgba(0, 0, 0, 0.03),
+    4px 8px 16px 32px rgba(0, 0, 0, 0.03);
+    transition: 0.5s;
+    z-index: 5;
+}
+.card:hover {
+    box-shadow:
+    0px 1px 2px 4px rgba(0, 0, 0, 0.07),
+    1px 2px 4px 8px rgba(0, 0, 0, 0.07),
+    2px 4px 8px 16px rgba(0, 0, 0, 0.07),
+    4px 8px 16px 32px rgba(0, 0, 0, 0.07);
+}
+.image {
+    background-color: hsl(244, 75%, 52%);
+    width: 325px;
+    border-radius: 20px 20px 0 0;
+}
+.image img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+.description {
+    text-align: center;
+    width: 245px;
+    margin: auto;
+}
+.description h2 {
+    color: hsl(223, 47%, 23%);
+    margin-top: 25px;
+    margin-bottom: 18px;
+}
+.description p {
+    color: hsl(224, 23%, 55%);
+    font-size: 14.5px;
+    line-height: 1.5rem;
+    margin-bottom: 23px;
+}
+.plan {
+    display: flex;
+    width: 280px;
+    height: 80px;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 10px;
+    margin: auto;
+    position: relative;
+}
+.plan .music-icon img {
+    position: absolute;
+    left: 17.5px;
+    top: 17.5px;
+}
+.plan .plan-info {
+    position: absolute;
+    left: 87.5px;
+}
+.plan-info .plan-name h4 {
+    color: hsl(223, 47%, 23%);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.plan-info .plan-price h4 {
+    font-size: 14px;
+    margin-top: 3px;
+    color: hsl(224, 23%, 55%);
+}
+.plan h5 {
+    color: hsl(245, 75%, 52%);
+    position: absolute;
+    left: 215px;
+    top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.plan h5:hover {
+    color: hsla(245, 75%, 52%, 0.8);
+}
+.proceed {
+    background-color: hsl(245, 75%, 52%);
+    margin: auto;
+    width: 275px;
+    height: 45px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 5px 4px -2px hsla(245, 75%, 52%, 0.428);
+}
+.proceed:hover {
+    scale: 1.1;
+    background-color: hsla(245, 75%, 52%, 0.8);
+}
+.cancel {
+    color: hsl(224, 23%, 55%);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.cancel:hover {
+    color: black;
+}
+@media screen and (min-width : 750px) {
+    .card {
+        width: 450px;
+        height: 695px;
+    }
+    .image {
+        width: 450px;
+    }
+    .description {
+        width: 290px;
+        margin-top: 38px;
+    }
+    .description h2 {
+        font-size: 27px;
+    }
+    .description p {
+        font-size: 17px;
+    }
+    .plan {
+        width: 350px;
+        height: 100px;
+    }
+    .plan .music-icon img {
+        left: 22px;
+        top: 25px;
+    }
+    .plan .plan-info {
+        top: 0px;
+        left: 93px;
+    }
+    .plan-info .plan-name h4 {
+        font-size: 17px;
+    }
+    .plan-info .plan-price h4 {
+        font-size: 17px;
+    }
+    .plan h5 {
+        left: 275px;
+        top: 20px;
+    }
+    .proceed {
+        width: 350px;
+        height: 50px;
+        margin-top: 33px;
+    }
+    .cancel {
+        margin-top: 33px;
+    }
+}
